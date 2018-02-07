@@ -6,6 +6,7 @@ const BucketData = function(url){
 }
 
 BucketData.prototype.getData = function(){
+  console.log(this.url);
   const request = new Request(this.url);
   request.get(this.onLoad);
 }

@@ -14,13 +14,15 @@ BucketView.prototype.clear = function(country) {
   ul.innerHTML = '';
 }
 
-BucketView.prototype.render = function(country){
+BucketView.prototype.render = function(countries){
+  console.log(countries);
     const ul = document.querySelector('#selected-countries');
     // console.log(country);
-    for(var country in buckets){
+    for(var country of countries){
+    
     const li = document.createElement('li');
     const text = document.createElement('p');
-    text.innerText = `${country.name}`;
+    text.innerText = `${country.country}`;
     li.appendChild(text);
     ul.appendChild(li);
   };
