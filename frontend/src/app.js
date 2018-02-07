@@ -3,8 +3,8 @@ const bucketData = new BucketData();
 
 const app = function(){
   const bucketData = new BucketData();
-  const bucketView = new BucketView(document.querySelector("bucket-list"));
-  bucketData.onLoad = bucketView.render;
+  const bucketView = new BucketView(document.querySelector("selected-countries"));
+  bucketData.onLoad = bucketView.render();
   bucketData.getData();
 }
-document.addEventListener("DOMContentLoaded", app)
+document.addEventListener("onload", app)
